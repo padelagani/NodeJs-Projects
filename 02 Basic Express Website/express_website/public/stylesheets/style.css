@@ -4,5 +4,15 @@ body {
 
 .jumbotron{
     background:url(../images/bg.jpg) no-repeat;
-    align-content: center;
+    background-size: cover;
+}
+
+footer {
+    background: #000000;
+    color: gray;
+    height: 40px;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 10px;
+    overflow: auto;
 }
