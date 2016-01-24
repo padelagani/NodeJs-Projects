@@ -1,0 +1,40 @@
+doctype html
+html
+	head
+		title	NodeAuth
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		// Bootstrap Core CSS
+		link(href='/stylesheets/bootstrap.css', rel='stylesheet')
+		// Custom CSS
+		link(href='/stylesheets/style.css', rel='stylesheet')
+
+	body
+		nav.navbar.navbar-inverse.navbar-fixed-top
+			.container
+				.navbar-header
+					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+						span.sr-only Toggle navigation 
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand(href='#') NodeAuth
+				#navbar.collapse.navbar-collapse
+					ul.nav.navbar-nav
+						li(class=(title == 'Members' ? 'active' : ''))
+							a(href='/') Members
+						li(class=(title == 'Register' ? 'active' : ''))
+							a(href='/users/register') Register
+						li(class=(title == 'Login' ? 'active' : ''))
+							a(href='/users/login') Log In
+					ul.nav.navbar-nav.navbar-right
+						li
+							a(href='/users/logout') Logout
+	.container
+		block content
+	
+// jQuery Version 1.11.1
+	script(src='/javascripts/jquery.js')
+// Bootstrap Core JavaScript
+	script(src='/javascripts/bootstrap.js')
