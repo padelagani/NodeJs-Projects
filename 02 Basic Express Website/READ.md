@@ -1,7 +1,7 @@
 #### About
 
 >
->	This project a simple web server is generated using nodeJs.
+>	This project is about creating basic express website.
 >
 
 #### Prerequisite:
