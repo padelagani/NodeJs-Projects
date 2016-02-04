@@ -1,7 +1,7 @@
 doctype html
 html
 	head
-		title	NodeAuth
+		title NodeAuth
 		meta(charset='utf-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
@@ -24,17 +24,20 @@ html
 					ul.nav.navbar-nav
 						li(class=(title == 'Members' ? 'active' : ''))
 							a(href='/') Members
-						li(class=(title == 'Register' ? 'active' : ''))
-							a(href='/users/register') Register
-						li(class=(title == 'Login' ? 'active' : ''))
-							a(href='/users/login') Log In
+						if !user
+							li(class=(title == 'Register' ? 'active' : ''))
+								a(href='/users/register') Register
+							li(class=(title == 'Login' ? 'active' : ''))
+								a(href='/users/login') Log In
 					ul.nav.navbar-nav.navbar-right
-						li
-							a(href='/users/logout') Logout
+						if user
+							li
+								a(href='/users/logout') Logout
 	.container
+		!= messages()
 		block content
 	
-// jQuery Version 1.11.1
+	//jQuery Version 1.11.1
 	script(src='/javascripts/jquery.js')
-// Bootstrap Core JavaScript
+	//Bootstrap Core JavaScript
 	script(src='/javascripts/bootstrap.js')
